@@ -1,0 +1,48 @@
+{
+  "name": "codicastudio/youtube",
+  "description": "A noobs worthless garbage, just learning.",
+  "keywords": [
+      "worthless garabage by a noob."
+  ],
+  "homepage": "https://github.com/codicastudio/youtube",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Michael J Brown",
+          "email": "codicastudiodev@gmail.com",
+          "homepage": "https://codicastudio.dev",
+          "role": "Developer"
+      }
+  ],
+
+  "require": {
+    "php": "^7.4.8"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "codicastudio\\Youtube\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "codicastudio\\Youtube\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+},
+  "extra": {
+    "laravel": {
+      "providers": [
+        "codicastudio\\Youtube\\YoutubeServiceProvider"
+      ],
+      "aliases": {
+        "Youtube": "codicastudio\\Youtube\\Facades\\Youtube"
+      }
+    }
+  }
+}
